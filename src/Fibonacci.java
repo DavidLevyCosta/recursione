@@ -26,8 +26,8 @@ public class Fibonacci {
     private long calcFibonacci(int num) {
         recursion_counter++;
         if (num <= 1) return 1;
-        Long num1 = storedFibonacci.containsKey(num -  2) ? storedFibonacci.get(num - 2) : calcFibonacci(num - 2);
-        Long num2 = storedFibonacci.containsKey(num -  1) ? storedFibonacci.get(num - 1) : calcFibonacci(num - 1);
+        Long num1 = storedFibonacci.get(num - 2);
+        Long num2 = storedFibonacci.get(num - 1);
         return num1 + num2;
     }
 
